@@ -1,0 +1,20 @@
+{
+  "name": "js-education",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnichols/js-education.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allnichols/js-education/issues"
+  },
+  "homepage": "https://github.com/allnichols/js-education#readme"
+}
