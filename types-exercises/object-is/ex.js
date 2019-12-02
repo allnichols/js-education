@@ -1,6 +1,22 @@
 // TODO: define polyfill for `Object.is(..)`
+//My Solution
 if (!Object.is || true) {
-  Object.is = function ObjectIs(x, y) {};
+  Object.is = function ObjectIs(x, y) {
+    let xNegativeZero = isNegativeZero(x);
+    let yNegativeZero = isNegativeZero(y);
+
+    if (xNegativeZero === yNegativeZero) {
+      return true;
+    } else if (Number.isNaN(x) === Number.isNaN(y)) {
+      return true;
+    } else if (x === y) {
+      return true;
+    }
+
+    function isNegativeZero(v) {
+      return v == 0 && 1 / v == -Infinity;
+    }
+  };
 }
 
 // tests:

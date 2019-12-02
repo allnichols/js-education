@@ -12,3 +12,7 @@ console.log(typeof v);
 
 //Negative Zero
 // -0
+
+//Fundemental Objects
+// Built in objects
+// Native Functions
