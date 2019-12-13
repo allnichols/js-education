@@ -3,7 +3,7 @@ var nums = [10, -1, 2, 5, 0, 6, 4, -5];
 // then stiches them together in order.
 function mergeSort(array) {
   if (array.length <= 1) {
-    // base case - if array is one or less than one no need to continue
+    // base case - if array is one or less than one, then no need to continue
     return array;
   }
   //finding the middle of the array to start dividing
@@ -17,7 +17,7 @@ function mergeSort(array) {
   //calling the merge function
   return merge(mergeSort(left), mergeSort(right));
 }
-
+//===========================//
 function merge(left, right) {
   let result = [];
   let leftIndex = 0;
