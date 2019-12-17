@@ -4,8 +4,6 @@
 //   The outer loop goes over the whole list, the index of which signifies where the "sorted" part of the list is. The inner
 //   loop goes over the sorted part of the list and inserts it into the correct position in the array.
 
-//   Like bubble sort, there's a visualization mechanism available to you. Just call snapshot(myArray) at the beginning of
-//   your inner loop and it should handle the rest for you!
 var insertionSort = nums => {
   let arr = [];
   for (let i = 1; i < nums.length; i++) {
