@@ -36,3 +36,7 @@ rate = shippingRate(8, 4, 6);
 function addTwo(x, y) {
     return x + y;
 }
+//Impure Function
+function addAnother(x, y) {
+    return addTwo(x, y) + z;
+}
