@@ -16,11 +16,11 @@ extraNumbers();
 extraNumbers(3, 8, 11)
 
 // This would be a function
-function tuple(x, y) {
-    return [X + 1, y - 1];
-}
+// function tuple(x, y) {
+//     return [X + 1, y - 1];
+// }
 
-var [a, b] = tuple(...[5, 10])
+// var [a, b] = tuple(...[5, 10])
 
 //Function: the semantic realtionship b/w input and computed output
 function shippingRate(size, weight, speed) {
@@ -37,6 +37,21 @@ function addTwo(x, y) {
     return x + y;
 }
 //Impure Function
-function addAnother(x, y) {
-    return addTwo(x, y) + z;
+// function addAnother(x, y) {
+//     return addTwo(x, y) + z;
+// }
+
+//Reducing Surface Area - this is much easier to read and mentally follow
+function addAnother(z) {
+    return function addTwo(x, y) {
+        // console.log(x + y + z);
+    }
 }
+
+// addAnother(1)(20, 21);
+
+//Function Purity: is a level of confidence====//
+
+//Extracting Impurity
+
+
