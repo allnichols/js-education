@@ -19,6 +19,6 @@ var obj = {
     b: 2,
     c: 3
 }
-for (let v of obj) {
-    // console.log(v); -- will shoot a TypeError: obj is not iterable
-}
+// for (let v of obj) {
+//     // console.log(v); -- will shoot a TypeError: obj is not iterable
+// }

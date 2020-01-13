@@ -52,6 +52,15 @@ function addAnother(z) {
 
 //Function Purity: is a level of confidence====//
 
-//Extracting Impurity
+//The shape of the functions is based upon the number of things passed in and then 
+//outputted.
+//unary 
+function increment(x) {
+    return sum(x, 1)
+}
 
+//binary
+function sum(x, y) {
+    return x + y;
+}
 
