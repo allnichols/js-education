@@ -54,6 +54,8 @@ function addAnother(z) {
 
 //The shape of the functions is based upon the number of things passed in and then 
 //outputted.
+
+//input signature
 //unary 
 function increment(x) {
     return sum(x, 1)
@@ -63,4 +65,60 @@ function increment(x) {
 function sum(x, y) {
     return x + y;
 }
+
+// flip & reverse adapter
+function flip(fn) {
+    return function flipped(arg1, arg2, ...args) {
+        return fn(arg2, arg1, ...args);
+    }
+}
+
+function f(...args) {
+    return args;
+}
+
+var g = flip(f)
+console.log(g(1, 2, 3, 4), "flip & reverse adapter ex.");
+
+// spread adapter 
+function spreadArgs(fn) {
+    return function spread(args) {
+        return fn(...args);
+    }
+}
+
+function h(x, y, z, w) {
+    return x + y + z + w;
+}
+
+var a = spreadArgs(h);
+console.log(a([1, 2, 3, 4]), "Spread adapter");
+
+// Point-Free ===============//
+//Equational Reasoning
+function not(fn) { // can be used for binary operations (true or false)
+    return function negated(...args) {
+        return !fn(...args);
+    }
+}
+
+function isOdd(v) {
+    return v % 2 == 1;
+}
+
+var isEven = not(isOdd);
+
+console.log(isEven(5), "point free");
+
+
+
+function isOdd(v) {
+    return v % 2 == 1;
+}
+
+
+
+
+
+
 
