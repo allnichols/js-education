@@ -19,3 +19,8 @@ const output = multiplyBy2(num);
 console.log(output);
 const newOutput = multiplyBy2(10);
 //Same as above
+
+// CALL STACK 
+// JS keeps track of what function is currently running
+// by using a call stack
+// Whatever is at the top that is what is currently running.
