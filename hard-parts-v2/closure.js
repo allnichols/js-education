@@ -14,11 +14,18 @@ console.log(result);
 // Nested Function scope
 // Calling a function in the same function call as it was defined.
 function outer() {
-    let counter = 0;
+    let name = 'max'
+    let counter = 1;
     function incrementCounter() {
-        counter++;
+        return [name, counter++];
     }
-    incrementCounter();
+    return incrementCounter; // return a hidden property [[Scope]] which takes the counter variable.
 }
-outer();
+
+const myNewFunction = outer();
+
+console.log(myNewFunction());
+console.log(myNewFunction());
+console.log(myNewFunction());
+
 
